@@ -1,0 +1,40 @@
+{
+  "name": "opencode-codegraph-sync",
+  "version": "1.0.0",
+  "description": "OpenCode plugin that auto-syncs CodeGraph index on session creation",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": "./src/index.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "codegraph",
+    "code-intelligence",
+    "indexing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idhamhill/opencode-codegraph-sync.git"
+  },
+  "bugs": {
+    "url": "https://github.com/idhamhill/opencode-codegraph-sync/issues"
+  },
+  "homepage": "https://github.com/idhamhill/opencode-codegraph-sync#readme",
+  "peerDependencies": {
+    "@opencode-ai/plugin": ">=1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.0",
+    "@opencode-ai/plugin": "^1.18.0",
+    "@types/node": "^22.0.0"
+  }
+}

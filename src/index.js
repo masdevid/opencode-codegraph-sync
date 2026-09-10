@@ -1,6 +1,5 @@
 import path from "node:path";
 import os from "node:os";
-import type { Plugin } from "@opencode-ai/plugin";
 
 /**
  * OpenCode Plugin: CodeGraph Sync
@@ -9,7 +8,7 @@ import type { Plugin } from "@opencode-ai/plugin";
  * If the project isn't indexed yet, runs `codegraph init` instead.
  * Skips execution when the working directory is the home directory (~).
  */
-export const CodeGraphSyncPlugin: Plugin = async (ctx) => {
+export const CodeGraphSyncPlugin = async (ctx) => {
   const { $, directory } = ctx;
 
   const runSync = async () => {

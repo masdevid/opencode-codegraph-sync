@@ -23,12 +23,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/idhamhill/opencode-codegraph-sync.git"
+    "url": "git+https://github.com/masdevid/opencode-codegraph-sync.git"
   },
   "bugs": {
-    "url": "https://github.com/idhamhill/opencode-codegraph-sync/issues"
+    "url": "https://github.com/masdevid/opencode-codegraph-sync/issues"
   },
-  "homepage": "https://github.com/idhamhill/opencode-codegraph-sync#readme",
+  "homepage": "https://github.com/masdevid/opencode-codegraph-sync#readme",
   "peerDependencies": {
     "@opencode-ai/plugin": ">=1.0.0"
   },

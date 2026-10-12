@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "OpenCode plugin that auto-syncs CodeGraph index on session creation",
   "type": "module",
-  "main": "./src/index.js",
-  "exports": "./src/index.js",
+  "main": "./index.js",
+  "exports": "./index.js",
   "files": [
+    "index.js",
     "src"
   ],
   "scripts": {

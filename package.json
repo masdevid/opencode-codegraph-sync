@@ -1,17 +1,23 @@
 {
   "name": "opencode-codegraph-sync",
-  "version": "1.0.0",
-  "description": "OpenCode plugin that auto-syncs CodeGraph index on session creation",
+  "version": "1.1.0",
+  "description": "OpenCode plugin that keeps the CodeGraph index fresh on every new session (works with OpenCode V1 and V2)",
   "type": "module",
   "main": "./index.js",
-  "exports": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./tui": "./tui.js",
+    "./rpc": "./rpc.js",
+    "./package.json": "./package.json"
+  },
   "files": [
     "index.js",
-    "src"
+    "sync.js",
+    "tui.js",
+    "rpc.js"
   ],
   "scripts": {
-    "test": "node --test",
-    "typecheck": "tsc --noEmit"
+    "test": "node --test"
   },
   "keywords": [
     "opencode",
@@ -20,8 +26,11 @@
     "code-intelligence",
     "indexing"
   ],
-  "author": "",
+  "author": "masdevid",
   "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/masdevid/opencode-codegraph-sync.git"
@@ -29,13 +38,5 @@
   "bugs": {
     "url": "https://github.com/masdevid/opencode-codegraph-sync/issues"
   },
-  "homepage": "https://github.com/masdevid/opencode-codegraph-sync#readme",
-  "peerDependencies": {
-    "@opencode-ai/plugin": ">=1.0.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.8.0",
-    "@opencode-ai/plugin": "^1.18.0",
-    "@types/node": "^22.0.0"
-  }
+  "homepage": "https://github.com/masdevid/opencode-codegraph-sync#readme"
 }

@@ -128,7 +128,7 @@ test("V1 entrypoint runs init for a new project on session.created", async () =>
 
   await hooks.event({ event: { type: "session.created" } })
 
-  assert.deepEqual(stub.calls(), [{ cwd: directory, args: "init --yes" }])
+  assert.deepEqual(stub.calls(), [{ cwd: directory, args: "init" }])
 })
 
 test("V1 entrypoint swallows a missing codegraph binary", async () => {

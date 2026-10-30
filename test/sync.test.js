@@ -33,7 +33,7 @@ test("initializes a project that has no .codegraph directory", async () => {
   const result = await ensureIndex(directory)
 
   assert.deepEqual(result, { mode: "init", changed: true })
-  assert.deepEqual(stub.calls(), [{ cwd: directory, args: "init --yes" }])
+  assert.deepEqual(stub.calls(), [{ cwd: directory, args: "init" }])
 })
 
 test("syncs an indexed project and reports no change when up to date", async () => {

@@ -65,7 +65,9 @@ export function ensureIndex(directory) {
   const task = (async () => {
     if (!existsSync(join(directory, ".codegraph"))) {
       // First time: full init. Awaited by the caller so the index is ready.
-      await runCodegraph(["init", "--yes"], directory)
+      // No `--yes`: current CodeGraph CLI releases don't accept it, and
+      // `init` is already non-interactive.
+      await runCodegraph(["init"], directory)
       return { mode: "init", changed: true }
     }
 

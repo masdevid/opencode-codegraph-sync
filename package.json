@@ -1,6 +1,6 @@
 {
   "name": "opencode-codegraph-sync",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "OpenCode plugin that keeps the CodeGraph index fresh on every new session (works with OpenCode V1 and V2)",
   "type": "module",
   "main": "./index.js",

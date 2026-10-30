@@ -8,7 +8,7 @@ Works with **OpenCode V2** and **OpenCode V1 (1.18.29+)** from the same package.
 
 CodeGraph gives OpenCode sub-millisecond code intelligence by maintaining a parsed knowledge graph of your project, but the index can drift as files change. This plugin makes sure it is current:
 
-- **No index yet?** It runs `codegraph init --yes` once.
+- **No index yet?** It runs `codegraph init` once.
 - **Already indexed?** It runs `codegraph sync` — fast and incremental.
 - **Nothing to do?** It stays completely silent.
 
@@ -88,7 +88,7 @@ Start OpenCode in a project. The first session creates `.codegraph/`; later sess
 On every `session.created` event:
 
 1. **Home directory is skipped** — OpenCode never tries to index your entire home directory.
-2. **`.codegraph/` is missing** — runs `codegraph init --yes` and waits for it.
+2. **`.codegraph/` is missing** — runs `codegraph init` and waits for it.
 3. **`.codegraph/` exists** — runs `codegraph sync` in the background.
 4. **Output is discarded** — nothing is printed over the terminal UI.
 5. **Concurrent sessions are deduped** — one sync per project directory at a time.
@@ -128,7 +128,7 @@ npm test
 
 The tests cover:
 
-- `init --yes` for unindexed projects
+- `init` for unindexed projects
 - `sync` with changed / unchanged output
 - silence (output never reaches stdout)
 - home-directory and missing-directory skips
